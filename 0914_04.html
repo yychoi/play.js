@@ -1,0 +1,45 @@
+
+<!doctype html>
+<head>
+	<title>java scripts</title>
+	<style>
+		input{font-size:1em;}
+		button{font-size:1em;}
+		body{font-size: 2em}
+	</style>
+</head>
+<body>
+	<h1 id="display">Learning your standardweight</h1>
+	<!--html주석은 화살표-->
+	<!--html은 단어구분에 하이폰을 사용한다-->
+	weight<input type="text" id="weight" placeholder="your weight">kg
+	<br>
+	height<input type="text" id="height" placeholder="your height">cm
+	<br><button id="action">Submit</button>
+	
+<p></p>
+<p></p>	
+
+<script>
+	//스크립트 주석은 슬래쉬, 스크립트는 하이폰 사용 x(html과 연동시에도 x)
+	//스크립트는 단어구분을 대문자로한다.(첫단어는 소문자)
+	//변수와 함수
+		action.onclick=function(){
+			console.log("OK");
+			//alert:("메세지") -->경고창 
+			var myWeight=weight.value;
+			var myHeight=height.value;
+			standardWeight(myWeight,myHeight);
+		}
+
+	function standardWeight(weight,height){
+		var standardWeight=(height-100)*0.9; 
+		var dietWeight= weight-standardWeight;
+		var fatRate=(weight/standardWeight)*10;		
+		var Text ="current weight is"+weight+" kg."+" and standardWeight"+standardWeight+"kg"+" therefore," + "-"+dietWeight+"kg"+"currnet fatWeight is" + fatRate+"%";
+		display.innerHTML=Text;
+		//innerHTML: 텍스트 안에 있는 내용을 바꿔줌
+		}
+		
+</script>
+</body>
