@@ -1,0 +1,21 @@
+
+<!doctype html>
+<head>
+	<title>java scripts</title>
+</head>
+<body>
+	<h1>value and function</h1>
+<script>
+	//변수와 함수
+	standardWeight(75,175);
+	standardWeight(70,181);
+
+	function standardWeight(weight,height){
+		var standardWeight=(height-100)*0.9; 
+		var dietWeight= weight-standardWeight;
+		var Text ="current weight is"+weight+" kg."+" and standardWeight"+standardWeight+"kg"+" therefore," + "-"+dietWeight+"kg";
+		console.log(Text);
+		}
+
+</script>
+</body>
