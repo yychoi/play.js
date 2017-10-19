@@ -1,0 +1,127 @@
+<idoctype html>
+<head>
+	<meta charset = "utf-8">
+	<link href='normalize.css' rel="stylesheet">
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+	<style>
+		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
+		.section{height:600px;width:100%;position: relative}
+		header{height:300px; background: black;width:100%; transition: all 0.3s}
+		header #logo{width:200px;text-align: center;height:44px;line-height: 44px; font-size: 1.5em;font-weight: 700;position:relative;left:calc(50% - 100px);transition: all 0.3s;color:white}
+		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 350px);top:80px;transition: all 0.3s}
+		header li{width:100px;height:100px;color:black;background: white;float:left;border-radius: 50px;text-align: center;line-height: 100px;color:black;font-size: 3em;margin-left: 20px;margin-right:20px;}
+		h1{color:white;font-size: 3em;text-align: center;padding-top:280px; line-height: 1.2;padding-left: 100px;padding-right: 100px;letter-spacing: -1px;}
+		p{color:white; font-size: 1.8em; text-align:center;
+			padding-top:40px; line-height: 1.2em; padding-left: 100px; padding-right: 100px; letter-spacing: -1px;}
+		.sectionP{color:black;}
+		#sectionA{ background: url('./ex/01.jpg');background-size:100% auto;background-position: 0px -120px;
+			height:500px;}
+		#sectionB{ background: url('./ex/02.jpg');background-size:100% auto;background-position: 0px -120px;}
+		#sectionC{ background: url('./ex/03.jpg');background-size:100% auto;background-position: 0px -120px; }
+		#sectionD{background: url('./ex/04.jpg');background-size:100% auto;background-position: 0px -120px;}
+		#titleA{transition: all 1s;}
+		#titleB{transition: all 1s;}
+		#titleC{transition: all 1s;}
+		#titleD{transition: all 1s;}
+
+	</style>
+</head>
+<body>
+<header id="header">
+	<div id="logo">Daily Exhibition</div>
+	<div id="menu">
+		<ul>
+			<li id="menuA">01</li>
+			<li id="menuB">02</li>
+			<li id="menuC">03</li>
+			<li id="menuD">04</li>
+		</ul>
+	</div>
+</header>
+<div class="section" id="sectionA">
+	<h1 id="titleA">The Selby House : #즐거운_나의_집</h1>
+	<p id="textA">장소 : 대림미술관<br>
+	관람시간 10:00am - 6:00pm<br>
+	요금 : 성인 6,000 / 학생 3,000 / 아동 2,000</p>
+</div>
+<div class="section" id="sectionB">
+	<h1 id="titleB">헨킴 : 미지에서의 여름</h1>
+	<p id="textB">장소 : 구슬모아당구장<br>
+	관람시간 1:00pm - 10:00pm <br>
+	요금 : 무료</p>
+</div>
+<div class="section" id="sectionC">
+	<h1 id="titleC">PLASTIC FANTASTIC : 상상사용법</h1>
+	<p id="textC">장소 : 디뮤지엄 <br>
+	관람시간 10:00am - 6:00pm<br>
+	요금 : 성인 8,000 / 학생 5,000 / 아동 3,000</p>
+</div>
+<div class="section" id="sectionD">
+	<h1 id="titleD">ALICE : Into The Rabbit Hole</h1>
+	<p id="textD">장소 : 서울숲갤러리아포레 B2<br>
+	관람시간 : 10:00am - 7:00pm<br>
+	요금 : 성인 1,3000 / 학생 11,000 / 유아 9,000</p>
+<div class="section">
+	<h1 style="color:black">@copyright In.122333</h1>
+	<p class="sectionP">더 많은 전시를 만나보세요</p>
+</div>
+</div>
+<script>
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+		if(scrollH > 50){
+			header.style.height = "44px";
+			header.style.position = "fixed";
+			header.style.top = "0px";
+			header.style.zIndex = "9999";
+			menu.style.left = "400px";
+			menu.style.top = "-70px";
+			logo.style.left = "0px";
+			sectionA.style.marginTop = "44px";
+		}else{
+			header.style.height = "300px";
+			header.style.position = "relative";
+			header.style.top = "0px";
+			logo.style.left = "calc(50% - 100px)";
+			menu.style.left = "calc(50% - 350px)";
+			menu.style.top = "80px";
+			sectionA.style.marginTop = "0px";
+
+		}
+		if(scrollH > 280){
+			sectionA.style.background = "lightgreen";
+			menuA.style.background = "orange";
+		}else{
+			sectionA.style.background= "img(./ex/01.jpg)";
+			menuA.style.background = "ornage";
+		}
+
+		if(scrollH > 680){
+			sectionB.style.background = "Black";
+			menuB.style.background = "orange";
+		}else{
+			sectionB.style.background= "img(./ex/02.jpg)";
+			menuB.sytle.color = "white";
+			menuB.style.background = "black";
+		}
+
+		if(scrollH > 1198){
+			sectionC.style.background = "Red";
+			menuC.style.background = "orange";
+		}else{
+			sectionC.style.background= "img(./ex/03.jpg)";
+			menuC.style.background = "ornage";
+		}
+		if(scrollH > 1816){
+			sectionD.style.background = "Purple";
+			menuD.style.background = "orange";
+		}else{
+			sectionD.style.background= "img(./ex/04.jpg)";
+			menuD.style.background = "ornage";
+		}
+
+	}
+
+</script>
+</body>
