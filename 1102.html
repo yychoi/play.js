@@ -1,0 +1,193 @@
+<idoctype html>
+<head>
+	<title>오버토끼 소풍가기</title>
+	<meta charset = "utf-8">
+	<link href='normalize.css' rel="stylesheet">
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+	<style>
+		html { padding:0; margin:0;
+			font-family: 'Spoqa Han Sans'; font-weight: 200;}
+		.section{height:800px;width:100%;position: relative}
+		header{height:300px; background: gray; width:100%; transition: all 0.3s}
+		header #logo{
+			position:relative; left:calc(50% - 100px);
+			width:200px; height:44px; text-align: center;
+			font-size: 1.5em;font-weight: 700;
+			line-height: 44px;
+			transition: all 0.3s;color:white}
+		header #menu{
+			width:700px;height:100px;
+			position:relative;
+			left:calc(50% - 350px); top:80px;
+			transition: all 0.3s}
+		header li{
+			float:left; width:100px;height:100px;
+			background: white; color:black;
+			border-radius: 50px;
+			text-align: center; line-height: 100px;
+			color:black; font-size: 3em;
+			margin-left: 20px; 
+			margin-right:20px;}
+		h1{ width:48%;
+			line-height: 1.4;
+			position:relative; top:80px;
+			padding-left: 100px; padding-right: 50px;
+			text-align: left; letter-spacing: -1px;
+			color:black; font-size: 2.4em;}
+		p{ position:relative; top:110px;
+			padding-left: 100px; padding-right: 50px;
+			text-align: left; letter-spacing: -1px;
+			line-height: 1.4em;  font-size: 1.2em; color:black;}
+		#sectionA{ background: url('./img/bg01.png') no-repeat; 
+					background-size:100%;
+					background-position: 0px 300px;
+					transition: all 1s; }
+		#sectionA img{padding-left:1000px; margin-top:100px;}
+		#sectionB{ background: url('./img/carrot.jpg'); 
+					background-size:50px;
+					transition: all 1s; 
+					animation: bMove 8s linear;}
+		@keyframes bMove{
+			0%{ background-position: 0 300px; opacity:0;}
+			20%{opacity:1;}
+			80%{ opacity:1; }
+			100%{ background-position:0 0;opacity:0;}
+		}
+		#secctionB img{width:80%; 
+			position:relative; top:20px;}
+		#sectionC{ background: yellow; transition: all 1s; }
+		#sectionC img{width:80%; top:180px; margin-left:200px;}
+		#sectionD{ background: yellow; transition: all 1s; }
+		#sectionD{ background: skyblue; transition: all 1s; }
+		#sectionD img{width:60%; top:180px; margin-left:600px;}
+		#sectionE{background: yellow; transition: all 1s; }
+		#sectionE img{
+			margin:0; padding:0;
+			width:80%; 
+			position:absolute top:0px; 
+			margin-left:180px;}
+
+		#titleA{transition: all 1s;}
+		#titleB{transition: all 1s;}
+		#titleC{transition: all 1s;}
+		#titleD{transition: all 1s;}
+		#titleE{transition: all 1s;}
+		
+	</style>
+</head>
+<body>
+<header id="header">
+	<div id="logo">오버토끼 소풍가기</div>
+	<div id="menu">
+		<ul>
+			<li id="menuA">
+				<img width="60px"; src="./img/icon01.png"></img></li>
+			<li id="menuB"><img width="60px"; src="./img/icon03.png"></li>
+			<li id="menuC"><img width="60px"; src="./img/icon02.png"></li>
+			<li id="menuD"><img width="60px"; src="./img/icon04.png"></li>
+			<li id="menuE"><img width="60px"; src="./img/icon05.png"></li>
+		</ul>
+	</div>
+</header>
+<div class="section" id="sectionA">
+	<h1 id="titleA">
+	동생 토끼가 첫 소풍을 가는 날입니다.<br>
+	무엇을 준비해 주면 좋을까요?</h1>
+	<p>베이비 토끼가 소풍가는 날입니다.<br>
+	리스트에 맞춰서 소풍 준비를 도와봅시다.<br>
+	</p>
+	<img src="./img/00.png"></img>
+</div>
+<div class="section" id="sectionB">
+	<h1 style="background-color:white" id="titleB">01 도시락싸기</h1>
+	<img src="./img/03.png"></img>
+</div>
+<div class="section" id="sectionC">
+	<h1 id="titleC">02 돗자리 챙기기</h1>
+	<p>여행 장소가 검단산이라고 하네요.<br>
+	잔디밭에 앉아서 식사를 한다고 하니 돗자리를 챙겨야겠네요.<br>
+	<img src="./img/02.png"></img>
+</div>
+<div class="section" id="sectionD">
+	<h1 id="titleD">비가 올지도 모르니까 우산도 챙겨두자</h1>
+	<img src="./img/04.gif"></img>
+</div>
+<div class="section" id="sectionE">
+	<h1 id="titleE">소풍준비 끝! </h1>
+	<img src="./img/0101.png"></img>
+</div>
+<script>
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+		if(scrollH > 50){
+			header.style.height = "44px";
+			header.style.position = "fixed";
+			header.style.top = "0px";
+			header.style.zIndex = "9999";
+			menu.style.left = "400px";
+			menu.style.top = "-70px";
+			logo.style.left = "0px";
+			sectionA.style.marginTop = "44px";
+		}else{
+			header.style.height = "300px";
+			header.style.position = "relative";
+			header.style.top = "0px";
+			logo.style.left = "calc(50% - 100px)";
+			menu.style.left = "calc(50% - 350px)";
+			menu.style.top = "80px";
+			sectionA.style.marginTop = "0px";
+
+		}
+
+		if(scrollH > 280){
+			titleA.style.paddingTop = "500px";
+			menuA.style.background = "gray";
+		}else{
+			titleA.style.paddingTop = "280px";
+			menuA.style.background = "white";
+		}
+
+		if(scrollH > 680){
+			titleB.style.paddingTop = "500px";
+			titleB.style.transform = "rotateY(180deg)";
+			menuB.style.background = "gray";
+		}else{
+			titleB.style.paddingTop = "280px";
+			titleB.style.transform = "rotateY(0deg)";
+			menuB.style.background = "white";
+
+		}
+
+		if(scrollH > 1198){
+			sectionC.style.backgroundAttachment = "fixed";
+			menuC.style.background = "gray";
+		}else{
+			sectionC.style.backgroundAttachment = "scroll";
+			menuC.style.background = "white";
+		}
+
+		if(scrollH > 1816){
+			sectionD.style.background = "#a1c9c0";
+			titleD.style.fontSize = "1.5em";
+			titleD.style.fontWeight = "700";
+			menuD.style.background = "gray";
+		}else{
+			sectionD.style.background = "#a1c9c0";
+			titleD.style.fontSize = "3em";
+			titleD.style.fontWeight = "200";
+			menuD.style.background = "white";
+		}
+
+		if(scrollH > 2400){
+			sectionE.style.background = "yellow";
+			titleE.style.color = "black";
+			menuE.style.background = "gray";
+		}else{
+			sectionE.style.background = "pink";
+			titleE.style.color = "white";
+			menuE.style.background = "white";
+		}
+	}
+</script>
+</body>
